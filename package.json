@@ -1,0 +1,20 @@
+{
+  "name": "form_project",
+  "description": "Project that demonstrates form validation and responsive layout techniques.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://MJRoss@bitbucket.org/MJRoss/form.bitbucket.io.git"
+  },
+  "author": "Malcolm Ross",
+  "license": "UNLICENSED",
+  "homepage": "https://bitbucket.org/MJRoss/form.bitbucket.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
