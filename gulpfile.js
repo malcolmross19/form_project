@@ -8,18 +8,17 @@ gulp.task('default', function() {
 
 });
 
-gulp.task('scss', function() {
+gulp.task('scss', function () {
     var processors = [
-        autoprefixer({ browsers: ['last 2 versions']})
+        autoprefixer({browsers: ['last 2 versions']})
     ];
 
-gulp.task('scss', function() {
     return gulp.src('./scss/*.scss')
         .pipe(sass())
         .pipe(postcss(processors))
         .pipe(gulp.dest('./css'))
         .pipe(browserSync.reload({
-            stream:true
+            stream: true
         }))
 });
 
