@@ -10541,3 +10541,6 @@ node_modules/sprintf-js/dist/sprintf.min.map
 node_modules/sprintf-js/src/angular-sprintf.js
 node_modules/sprintf-js/src/sprintf.js
 node_modules/sprintf-js/test/test.js
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/watcherTasks.xml
