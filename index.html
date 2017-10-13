@@ -11,40 +11,41 @@
 	<body>
 		<section id=container>
 			<section class="orderForm" id="productDetails">
-				<h1>Product Name</h1>
+				<h2 class="header">Product Name</h2>
 				<div id="productImg">
 					<img src="" alt="" />
 				</div>
 				<h1 id="price">$20.00</h1>
-				<h3>Select A Size</h3>
+				<h2>Select a size</h2>
 				<section id="sizes">
-					<div class="size">
-						<a href=""><h3>S</h3></a>
+					<div class="size" id="small">
+						<h3>S</h3>
 					</div>
-					<div class="size">
-						<a href=""><h3>M</h3></a>
+					<div class="size" id="medium">
+						<h3>M</h3>
 					</div>
-					<div class="size">
-						<a href=""><h3>L</h3></a>
+					<div class="size" id="large">
+						<h3>L</h3>
 					</div>
 				</section>
+				<h2>Select a color</h2>
 				<section id="colors">
-					<div class="color">
+					<div class="color" id="green">
 						<a href=""></a>
 					</div>
-					<div class="color">
+					<div class="color" id="red">
 						<a href=""></a>
 					</div>
-					<div class="color">
+					<div class="color" id="black">
 						<a href=""></a>
 					</div>
-					<div class="color">
+					<div class="color" id="blue">
 						<a href=""></a>
 					</div>
 				</section>
 			</section>
 			<section class="orderForm" id="shippingDetails">
-				<h2>Shipping Details</h2>
+				<h2 class="header">Shipping Details</h2>
 				<form>
 					<div class="control-group">
 						<label for="name"><h3>Full Name</h3></label>
@@ -54,25 +55,29 @@
 						<label for="email"><h3>Email</h3></label>
 						<input type="text" id="email" required />
 					</div>
-					<div class="control-group">
-						<label for="address1"><h3>Address</h3></label>
-						<input type="text" id="address1" required />
+					<div id="address">
+						<div class="control-group">
+							<label for="address1"><h3>Address</h3></label>
+							<input type="text" id="address1" required />
+						</div>
+						<div class="control-group">
+							<label for="address2"><h3>Address 2</h3></label>
+							<input type="text" id="address2" required />
+						</div>
 					</div>
-					<div class="control-group">
-						<label for="address2"><h3>Address 2</h3></label>
-						<input type="text" id="address2" required />
-					</div>
-					<div class="control-group">
-						<label for="city"><h3>City</h3></label>
-						<input type="text" id="city" required />
-					</div>
-					<div class="control-group">
-						<label for="state"><h3>State</h3></label>
-						<input type="text" id="state" required />
-					</div>
-					<div class="control-group">
-						<label for="zip"><h3>Zip</h3></label>
-						<input type="text" id="zip" required />
+					<div id="cityStateZip">
+						<div class="control-group">
+							<label for="city"><h3>City</h3></label>
+							<input type="text" id="city" required />
+						</div>
+						<div class="control-group">
+							<label for="state"><h3>State</h3></label>
+							<input type="text" id="state" required />
+						</div>
+						<div class="control-group">
+							<label for="zip"><h3>Zip</h3></label>
+							<input type="text" id="zip" required />
+						</div>
 					</div>
 					<div class="control-group">
 						<label for="country"><h3>Country</h3></label>
@@ -322,22 +327,25 @@
 				</form>
 			</section>
 			<section class="orderForm" id="orderDetails">
-				<h2>Order Summary</h2>
-				<div>
-					<p>Product Name</p><p>$20.00</p>
+				<h2 class="header">Order Summary</h2>
+				<div id="product">
+					<p id="productName">Product Name</p><p id="productPrice">$20.00</p>
+				</div>
+				<div class="lineBreak"></div>
+				<div id="shipping">
+					<p>Shipping</p><p>Free</p>
+				</div>
+				<div id="total">
+					<p>Total</p><p>$20.00</p>
 				</div>
 				<div class="lineBreak"></div>
 				<div>
-					<p>Shipping</p><p>Free</p>
-					<p>Total</p><p>$20.00</p>
+					<h3 class="header">Shipping Address</h3>
+					<div id="enteredAddress"></div>
 				</div>
-				<div>
-					<h3>Shipping Address</h3>
-					<p></p>
-				</div>
-				<button class="btn"><h2>Complete Order</h2></button>
+				<input type="submit" class="btn" value="Complete Order" />
 			</section>
 		</section>
-		<script src=""></script>
+		<script src="js/content.js"></script>
 	</body>
 </html>
