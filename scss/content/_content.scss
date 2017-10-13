@@ -4,16 +4,27 @@ body {
   @extend %center-element;
 }
 
+h2, #colors {
+  font-size: 2em;
+  padding-left: 10px;
+}
+
 .orderForm {
   display: inline-block;
   width: 400px;
+  height: 750px;
   float: left;
+}
+
+#productDetails {
+  background: white;
 }
 
 #productImg {
   display: block;
   width: 375px;
   height: 375px;
+  margin-left: 10px;
   background: $primary-color;
 }
 
@@ -26,30 +37,165 @@ body {
 
 #sizes {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 375px;
+  margin-bottom: 50px;
+  @extend %center-element;
 }
 
 .size {
   display: inline-block;
   float: left;
   width: 105px;
-  background: $primary-color;
+  border: none;
+  background: #E6E6E6;
   text-align: center;
-  margin-right: 20px;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
 }
 
 #colors {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 375px;
 }
 
 .color {
   display: inline-block;
   float: left;
-  background: $primary-color;
-  width: 50px;
+  width: 75px;
+  height: 50px;
+}
+
+#green {
+  background: #00b400;
+}
+
+#red {
+  background: #d70000;
+}
+
+#black {
+  background: #2d2d2d;
+}
+
+#blue {
+  background: #2968ff;
 }
 
 #shippingDetails {
   background: $secondary-color;
+}
+
+#shippingDetails {
+
+  h2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+  }
+}
+
+.control-group {
+  float: left;
+
+  input {
+    display: inline-block;
+    width: 375px;
+    height: 50px;
+    font-size: 16px;
+    margin-left: 10px;
+    @extend %center-element;
+
+  }
+
+  label {
+    display: block;
+    width: auto;
+    padding-left: 10px;
+  }
+
+  select {
+    display: block;
+    width: 375px;
+    height: 50px;
+    margin-left: 10px;
+    font-size: 16px;
+  }
+
+  #address1, #address2{
+    width: 175px;
+    float: left;
+  }
+
+  #city, #zip {
+    width: 125px;
+  }
+
+  #state {
+    width: 75px;
+  }
+
+}
+
+#cityStateZip {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+
+  .control-group {
+    @extend %center-element;
+  }
+}
+
+#address {
+  display: inline-block;
+
+  .control-group {
+    padding-right: 5px;
+  }
+}
+
+#orderDetails {
+  background: $tertiary-color;
+
+  h3, .btn {
+    margin-left: 10px;
+  }
+}
+
+.lineBreak {
+  width: auto;
+  height: 2px;
+  background: #b4b4b4;
+}
+
+#product, #shipping, #total  {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-between;
+
+  p {
+    font-size: 20px;
+  }
+}
+
+.btn {
+  display: block;
+  background: #00b400;
+  width: 375px;
+  height: 50px;
+  margin-right: 10px;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  bottom: 20px;
 }
