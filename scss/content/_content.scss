@@ -23,6 +23,7 @@ body {
 }
 
 #container {
+  height: 1000px;
   @extend %center-element;
 }
 
@@ -34,13 +35,17 @@ h2, #colors {
 .orderForm {
   display: inline-block;
   width: 400px;
-  height: 850px;
+  height: 900px;
   float: left;
   position: relative;
 }
 
 #productDetails {
   background: white;
+
+  h2 {
+    margin-top: 20px;
+  }
 }
 
 #productImg {
@@ -62,12 +67,12 @@ h2, #colors {
   text-align: right;
 }
 
+
 #sizes {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 375px;
-  margin-bottom: 50px;
   @extend %center-element;
 }
 
@@ -137,18 +142,20 @@ h2, #colors {
     height: 50px;
     font-size: 16px;
     margin-left: 10px;
+    margin-bottom: 5px;
     @extend %center-element;
 
-    :valid {
-      border-color: green;
-    }
+  }
 
+  input:valid {
+    border-color: green;
   }
 
   label {
     display: block;
     width: auto;
     padding-left: 10px;
+    font-weight: bold;
   }
 
   select {
@@ -237,7 +244,7 @@ h2, #colors {
 
 #btn {
   display: block;
-  background: #00b400;
+  background: #009100;
   width: 375px;
   height: 50px;
   margin-left: 10px;
