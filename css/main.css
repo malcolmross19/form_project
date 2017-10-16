@@ -1,14 +1,19 @@
-body, #sizes, .control-group input, #cityStateZip .control-group {
+body, #container, #sizes, .control-group input, #cityStateZip .control-group {
   margin-left: auto;
   margin-right: auto; }
 
 body {
   font-size: 14px;
-  background: #e6e6e6; }
+  background: #b4b4b4; }
 
 body {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 1200px; }
+  @media (min-width: 300px) {
+    body {
+      width: 100%; } }
 
 h2, #colors {
   font-size: 2em;
@@ -17,8 +22,9 @@ h2, #colors {
 .orderForm {
   display: inline-block;
   width: 400px;
-  height: 750px;
-  float: left; }
+  height: 850px;
+  float: left;
+  position: relative; }
 
 #productDetails {
   background: white; }
@@ -27,8 +33,10 @@ h2, #colors {
   display: block;
   width: 375px;
   height: 375px;
-  margin-left: 10px;
-  background: #e6e6e6; }
+  margin-left: 10px; }
+  #productImg img {
+    width: 375px;
+    height: 375px; }
 
 #price {
   font-weight: bold;
@@ -105,6 +113,8 @@ h2, #colors {
     height: 50px;
     font-size: 16px;
     margin-left: 10px; }
+    .control-group input :valid {
+      border-color: green; }
   .control-group label {
     display: block;
     width: auto;
@@ -140,12 +150,15 @@ h2, #colors {
 #orderDetails {
   background: #dcdcdc; }
   #orderDetails h3, #orderDetails .btn {
-    margin-left: 10px; }
+    margin-left: 10px;
+    font-size: 1.5em; }
 
 .lineBreak {
   width: auto;
   height: 2px;
-  background: #b4b4b4; }
+  background: #b4b4b4;
+  margin-left: 10px;
+  margin-right: 10px; }
 
 #product, #shipping, #total {
   display: -webkit-box;
@@ -159,15 +172,61 @@ h2, #colors {
   #product p, #shipping p, #total p {
     font-size: 20px; }
 
-.btn {
+#shipping, #total {
+  height: 60px; }
+
+#enteredInfo {
+  display: block;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 10px;
+  font-size: 18px; }
+  #enteredInfo p {
+    margin: 0; }
+
+#btn {
   display: block;
   background: #00b400;
   width: 375px;
   height: 50px;
-  margin-right: 10px;
+  margin-left: 10px;
   border: none;
   text-align: center;
   font-size: 18px;
   color: white;
   position: absolute;
   bottom: 20px; }
+
+#enteredCityStateZip p {
+  display: inline-block;
+  width: auto;
+  margin: 0; }
+
+.error {
+  padding-left: 10px;
+  color: red; }
+
+#success {
+  width: 450px; }
+  #success h1 {
+    font-size: 4em;
+    text-align: center; }
+  #success h3 {
+    padding-left: 10px;
+    font-weight: bold; }
+  #success #shipping, #success #total {
+    height: 40px; }
+    #success #shipping p, #success #total p {
+      margin: 10px 0; }
+
+#total p {
+  font-weight: bold; }
+
+#successCheck {
+  display: block;
+  margin-top: 40px;
+  text-align: center; }
+
+#success #enteredInfo p {
+  margin: 0; }
