@@ -1,6 +1,28 @@
+// Content
+
+@mixin responsive($size) {
+  @if $size == small {
+    @media (min-width: 300px) { @content; }
+  }
+  @else if $size == medium {
+    @media (min-width: 600px) { @content; }
+  }
+  @else if $size == large {
+    @media (min-width: 800px) { @content; }
+  }
+}
+
 body {
-  display: block;
+  display: flex;
   width: 1200px;
+  @extend %center-element;
+
+  @include responsive(small){
+    width: 100%;
+  }
+}
+
+#container {
   @extend %center-element;
 }
 
@@ -12,8 +34,9 @@ h2, #colors {
 .orderForm {
   display: inline-block;
   width: 400px;
-  height: 750px;
+  height: 850px;
   float: left;
+  position: relative;
 }
 
 #productDetails {
@@ -25,7 +48,11 @@ h2, #colors {
   width: 375px;
   height: 375px;
   margin-left: 10px;
-  background: $primary-color;
+
+  img {
+    width: 375px;
+    height: 375px;
+  }
 }
 
 #price {
@@ -112,6 +139,10 @@ h2, #colors {
     margin-left: 10px;
     @extend %center-element;
 
+    :valid {
+      border-color: green;
+    }
+
   }
 
   label {
@@ -166,6 +197,7 @@ h2, #colors {
 
   h3, .btn {
     margin-left: 10px;
+    font-size: 1.5em;
   }
 }
 
@@ -173,6 +205,8 @@ h2, #colors {
   width: auto;
   height: 2px;
   background: #b4b4b4;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #product, #shipping, #total  {
@@ -186,16 +220,83 @@ h2, #colors {
   }
 }
 
-.btn {
+#shipping, #total {
+  height: 60px;
+}
+
+#enteredInfo {
+  display: block;
+  justify-content: flex-start;
+  margin-left: 10px;
+  font-size: 18px;
+
+  p {
+    margin: 0;
+  }
+}
+
+#btn {
   display: block;
   background: #00b400;
   width: 375px;
   height: 50px;
-  margin-right: 10px;
+  margin-left: 10px;
   border: none;
   text-align: center;
   font-size: 18px;
   color: white;
   position: absolute;
   bottom: 20px;
+}
+
+#enteredCityStateZip {
+
+  p {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+  }
+}
+
+.error {
+  padding-left: 10px;
+  color: red;
+}
+
+#success {
+  width: 450px;
+
+  h1 {
+    font-size: 4em;
+    text-align: center;
+  }
+
+  h3 {
+    padding-left: 10px;
+    font-weight: bold;
+  }
+
+  #shipping, #total {
+    height: 40px;
+
+    p {
+      margin: 10px 0;
+    }
+  }
+}
+
+#total p{
+  font-weight: bold;
+}
+
+#successCheck {
+  display: block;
+  margin-top: 40px;
+  text-align: center;
+}
+
+#success #enteredInfo {
+  p {
+    margin: 0;
+  }
 }
