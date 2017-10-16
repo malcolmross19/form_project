@@ -165,8 +165,18 @@ submit.addEventListener('click', (event) => {
         })
     }
 
+    if(!productSizeContent){
+        sizes.style.border = '2px solid red';
+        sizes.insertAdjacentHTML('afterend', '<p class="error" id="sizeError">You must select a size.</p>')
+    }
+
+    if(!productColorContent){
+        colors.style.border = '2px solid red';
+        colors.insertAdjacentHTML('afterend', '<p class="error" id="sizeError">You must select a color.</p>')
+    }
+
     if(nameErrors == 0 && emailErrors == 0 && addressErrors == 0 && cityErrors == 0 && stateErrors == 0
-        && zipErrors == 0 && countryErrors == 0){
+        && zipErrors == 0 && countryErrors == 0 && productSizeContent && productColorContent){
         let containerContent = '';
 
         containerContent += '<div id="success">';
