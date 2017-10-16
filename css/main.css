@@ -15,6 +15,9 @@ body {
     body {
       width: 100%; } }
 
+#container {
+  height: 1000px; }
+
 h2, #colors {
   font-size: 2em;
   padding-left: 10px; }
@@ -22,12 +25,14 @@ h2, #colors {
 .orderForm {
   display: inline-block;
   width: 400px;
-  height: 850px;
+  height: 900px;
   float: left;
   position: relative; }
 
 #productDetails {
   background: white; }
+  #productDetails h2 {
+    margin-top: 20px; }
 
 #productImg {
   display: block;
@@ -53,8 +58,7 @@ h2, #colors {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 375px;
-  margin-bottom: 50px; }
+  width: 375px; }
 
 .size {
   display: inline-block;
@@ -112,13 +116,15 @@ h2, #colors {
     width: 375px;
     height: 50px;
     font-size: 16px;
-    margin-left: 10px; }
-    .control-group input :valid {
-      border-color: green; }
+    margin-left: 10px;
+    margin-bottom: 5px; }
+  .control-group input:valid {
+    border-color: green; }
   .control-group label {
     display: block;
     width: auto;
-    padding-left: 10px; }
+    padding-left: 10px;
+    font-weight: bold; }
   .control-group select {
     display: block;
     width: 375px;
@@ -187,7 +193,7 @@ h2, #colors {
 
 #btn {
   display: block;
-  background: #00b400;
+  background: #009100;
   width: 375px;
   height: 50px;
   margin-left: 10px;
